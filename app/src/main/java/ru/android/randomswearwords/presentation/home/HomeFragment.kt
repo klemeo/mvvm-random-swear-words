@@ -44,7 +44,8 @@ class HomeFragment : Fragment(), HomeContract {
     private fun initView() {
         viewModel.getWord()
         buttonNext.setOnClickListener {
-            textView.isGone = true
+            textView.isVisible = false
+            commentView.isVisible = false
             viewModel.getWord()
         }
 
